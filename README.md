@@ -26,14 +26,27 @@ The largest errors sit exactly where the physics predicts them: red regions (shi
 
 Camera (Canon M50 Mark II) and projector sit side by side, **L = 1450 mm** from a white reference board, with a baseline **d**. For each frequency, four patterns shifted by 0, π/2, π, 3π/2 are captured on the reference board and on the object.
 
-1. **N-step phase shifting** — for $I_k = A + B\cos(\varphi + \delta_k)$, $\delta_k = 2\pi k/N$:
-   $\varphi = \operatorname{atan2}\!\left(-\sum I_k \sin\delta_k,\ \sum I_k\cos\delta_k\right)$, $B = \tfrac{2}{N}\sqrt{C^2+S^2}$
-2. **Modulation mask** — keep pixels with $B > \alpha \max B$ (drops shadows, saturation, dark/red regions).
+1. **N-step phase shifting.** Each capture follows $I_k = A + B\cos(\varphi + \delta_k)$ with $\delta_k = 2\pi k/N$, so
+
+```math
+\varphi = \mathrm{atan2}\left(-\sum_k I_k \sin\delta_k,\ \sum_k I_k \cos\delta_k\right), \qquad B = \frac{2}{N}\sqrt{C^2 + S^2}
+```
+
+2. **Modulation mask.** Keep pixels with $B > \alpha \max B$ (drops shadows, saturation, dark/red regions).
 3. **Object − reference** wrapped phase difference at each frequency.
-4. **Multi-frequency temporal unwrapping** — the low frequency (no 2π jumps) guides the fringe order of the next one:
-   $k_m = \operatorname{round}\!\left[\left(\tfrac{N_m}{N_{m-1}}\Phi_{m-1} - \varphi_m\right)/2\pi\right]$, $\Phi_m = \varphi_m + 2\pi k_m$
-5. **Phase → height** — linear triangulation $h = K\,\Delta\varphi$, with $K = L p / (2\pi d) \approx 17.9$ mm/rad for the 70-fringe pattern.
-6. **Meshing** — each 2×2 block of valid pixels becomes two triangles → STL (Open3D), smoothed and printed.
+4. **Multi-frequency temporal unwrapping.** The low frequency (no 2π jumps) sets the fringe order of the next one:
+
+```math
+k_m = \mathrm{round}\left[\frac{\frac{N_m}{N_{m-1}}\Phi_{m-1} - \varphi_m}{2\pi}\right], \qquad \Phi_m = \varphi_m + 2\pi k_m
+```
+
+5. **Phase → height.** Linear triangulation with $K = Lp/(2\pi d) \approx 17.9$ mm/rad for the 70-fringe pattern:
+
+```math
+h(x,y) = K \, \Delta\varphi(x,y)
+```
+
+6. **Meshing.** Each 2×2 block of valid pixels becomes two triangles → STL (Open3D), smoothed and printed.
 
 ## Validation: sphere first
 
