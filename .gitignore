@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.vscode/
+*.npz
+results/sphere_singlefreq/
+.DS_Store

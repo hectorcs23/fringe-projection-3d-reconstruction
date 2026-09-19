@@ -1,0 +1,46 @@
+{
+  "Pie Derecho": {
+    "x": 338,
+    "y": 296
+  },
+  "Pie Izquierdo": {
+    "x": 240,
+    "y": 301
+  },
+  "Mano Derecha": {
+    "x": 376,
+    "y": 287
+  },
+  "Mano Izquierda": {
+    "x": 221,
+    "y": 288
+  },
+  "Oreja Derecha": {
+    "x": 324,
+    "y": 133
+  },
+  "Oreja Izquierda": {
+    "x": 257,
+    "y": 144
+  },
+  "Ojo Derecho": {
+    "x": 310,
+    "y": 159
+  },
+  "Ojo Izquierdo": {
+    "x": 278,
+    "y": 164
+  },
+  "Nariz": {
+    "x": 294,
+    "y": 173
+  },
+  "Panza": {
+    "x": 296,
+    "y": 272
+  },
+  "Camisa": {
+    "x": 296,
+    "y": 225
+  }
+}

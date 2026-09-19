@@ -1,0 +1,56 @@
+Analisis de error
+
+npz: C:\Users\hecto\OneDrive\Documentos\Optica\out_pooh\result_mf.npz
+value: Z
+fit: affine
+baseline_cm: 15.0
+baseline_unc_cm: +/-0.5
+distance_cm: 142.0
+distance_unc_cm: +/-0.5
+real_unc_cm: +/-0.5
+uncertainty_model: uniform
+raw_unc_mode: sem
+mc_samples: 10000
+z_cm = 2.7356559 * raw + 2.9394097
+loo: leave-one-out con el mismo modelo
+
+Resumen:
+  n: 11
+  bias_cm: 0.0000
+  mae_cm: 1.3538
+  rmse_cm: 1.7423
+  max_abs_cm: 3.6549
+  std_cm: 1.8274
+  loo_n: 11
+  loo_bias_cm: 0.0529
+  loo_mae_cm: 1.6558
+  loo_rmse_cm: 2.0975
+  loo_max_abs_cm: 4.2760
+  loo_std_cm: 2.1992
+  bias_mc_std_cm: 0.0000
+  bias_mc_ci95_low_cm: -0.0000
+  bias_mc_ci95_high_cm: 0.0000
+  mae_mc_std_cm: 0.0815
+  mae_mc_ci95_low_cm: 1.2187
+  mae_mc_ci95_high_cm: 1.5356
+  rmse_mc_std_cm: 0.0953
+  rmse_mc_ci95_low_cm: 1.5719
+  rmse_mc_ci95_high_cm: 1.9448
+  max_abs_mc_std_cm: 0.2601
+  max_abs_mc_ci95_low_cm: 3.2086
+  max_abs_mc_ci95_high_cm: 4.1538
+  loo_bias_mc_std_cm: 0.0129
+  loo_bias_mc_ci95_low_cm: 0.0278
+  loo_bias_mc_ci95_high_cm: 0.0777
+  loo_mae_mc_std_cm: 0.1013
+  loo_mae_mc_ci95_low_cm: 1.4881
+  loo_mae_mc_ci95_high_cm: 1.8809
+  loo_rmse_mc_std_cm: 0.1163
+  loo_rmse_mc_ci95_low_cm: 1.8920
+  loo_rmse_mc_ci95_high_cm: 2.3457
+  loo_max_abs_mc_std_cm: 0.3113
+  loo_max_abs_mc_ci95_low_cm: 3.7333
+  loo_max_abs_mc_ci95_high_cm: 4.8647
+  reference_sigma_cm: 0.2887
+  rmse_system_est_cm: 1.7182
+  loo_rmse_system_est_cm: 2.0776
